@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { ArrowIcon } from "./ArrowIcon";
 
 export function DrawingReveal() {
   const [position, setPosition] = useState(50);
@@ -50,6 +51,14 @@ export function DrawingReveal() {
         />
         <span>Пространство</span>
       </label>
+      <a
+        className="document-open"
+        href="/images/baltiyskiy/elevation.webp"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Открыть развёртку крупно <ArrowIcon direction="diagonal" />
+      </a>
     </div>
   );
 }

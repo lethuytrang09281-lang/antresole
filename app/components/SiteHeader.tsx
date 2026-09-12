@@ -13,6 +13,7 @@ export function SiteHeader() {
           sizes="(max-width: 820px) 192px, 288px"
         />
       </Link>
+      <p className="site-header__discipline">Интерьер / архитектура</p>
       <nav aria-label="Основная навигация">
         <Link href="/#projects">Проекты</Link>
         <Link href="/#studio">Студия</Link>

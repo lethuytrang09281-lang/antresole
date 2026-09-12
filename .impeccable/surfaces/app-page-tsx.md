@@ -5,14 +5,14 @@ primary_target: "app/page.tsx"
 related_targets: ["app/globals.css","app/layout.tsx"]
 ---
 
-THESIS: «Балтийский 99» reads like an architectural folio being opened, not a portfolio template. It refuses the standard hero-plus-project-cards arrangement; each viewport is a composed project leaf.
+THESIS: Antresole reads as an architectural instrument that happens to contain a portfolio. It combines a giant brand register, technical coordinates, visible modular measurement, and full-scale imagery instead of a conventional editorial cover or project-card gallery.
 
-OWN-WORLD: Warm paper, near-black ink, warm gray metadata, full-color project plates, hairline rules, editorial serif headlines, neutral grotesk notes, square image edges, and drawing-register precision. With content removed, the alternating image fields and measured white margins remain recognizable.
+OWN-WORLD: Pale drafting paper, near-black ink, one safety-orange signal, self-hosted engineered grotesk, monospaced measurements, twelve-column rules, square image edges, technical sheets and full-color project plates. With content removed, the oversized Antresole wordmark, visible coordinate grid, large numeric index and abrupt image-to-paper transitions remain recognizable.
 
-STORY: A prospective client first sees the completed spatial idea, then follows the apartment from overall atmosphere to planning logic and wall development. The evidence should make the studio feel visually exact and technically grounded; the visitor continues through the case rather than being asked to believe marketing claims.
+STORY: A prospective client meets the studio identity first, enters the leading project through one cinematic frame, and then sees the method behind it: plan, spatial sequence and wall development. The site demonstrates visual control and technical authorship without unsupported marketing claims.
 
-FIRST VIEWPORT: A quiet two-line masthead sits above a single oversized living-room visualization. The project title occupies the lower-left paper field, compact facts align to the opposite grid edge, and the only primary action is the underlined «Смотреть проект» anchor crossing into the image. At the first scroll, the image clips upward while the title holds briefly, turning the cover into the first project leaf.
+FIRST VIEWPORT: A ruled utility header leads into the supplied Antresole logotype enlarged almost to the width of the screen. Below it, one terse studio statement and coordinate label land directly on the grid before a full-width «Балтийский 99» image plate. The project bar behaves like an engineering index: number, name, area, year and a single authored arrow. On the case page, the same image becomes a near-full-viewport cover with the title, project facts and description positioned over the architecture.
 
-FORM: Architectural exhibition folio, seventh in the grounded list; seed key 6e712f10. The brief-pinned Swiss-editorial direction is authoritative. Code-led for this prototype. Signature interaction: drawing-to-space reveal. Motion grammar: calm clip reveals, one sticky handoff, no repeated entrance effect.
+FORM: User-pinned hybrid of Reality Is and Heron for the identity/first screen, Storey and Eleos for project sequencing, and WRK for technical typography and grid discipline. Code-led. Signature interaction: drawing-to-space reveal. Motion grammar: one precise image-scale response and the user-controlled comparison line; content remains complete without motion.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

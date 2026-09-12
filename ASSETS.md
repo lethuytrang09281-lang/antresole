@@ -14,4 +14,4 @@ All website rasters are prepared derivatives. Original client files remain uncha
 | `public/images/baltiyskiy/plan.webp` | first page of `Балтийский_99м2_Планировка_фин._7,07.pdf`, title block cropped |
 | `public/images/baltiyskiy/elevation.webp` | first page of `Развертки стен Гостиной.pdf`, title block cropped |
 
-Fonts are self-hosted copies of Manrope and Prata downloaded from Google Fonts for this prototype. The repository contains prepared website derivatives only, not the source archive.
+Typography uses self-hosted Manrope files already prepared for the prototype and Ubuntu Mono Variable copied from the installed Ubuntu font at `/usr/share/fonts/truetype/ubuntu/UbuntuMono[wght].ttf`. Prata remains in the repository from the first visual draft but is not loaded by the current interface. The repository contains prepared website derivatives only, not the source archive.

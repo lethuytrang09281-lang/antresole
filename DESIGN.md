@@ -1,46 +1,224 @@
-# Antresole visual system
+---
+name: Antresole
+description: Инженерно-редакционное портфолио, где чертёжная логика встречается с крупной архитектурной фотографией.
+colors:
+  paper: "#f3f3ec"
+  paper-bright: "#ffffff"
+  ink: "#11110f"
+  muted-ink: "#66665f"
+  construction-line: "#d7d7cf"
+  safety-orange: "#f24a16"
+typography:
+  display:
+    fontFamily: "Manrope, sans-serif"
+    fontSize: "clamp(4.5rem, 10vw, 11rem)"
+    fontWeight: 500
+    lineHeight: 0.88
+    letterSpacing: "-0.04em"
+  headline:
+    fontFamily: "Manrope, sans-serif"
+    fontSize: "clamp(3rem, 4.2vw, 5rem)"
+    fontWeight: 500
+    lineHeight: 0.96
+    letterSpacing: "-0.035em"
+  title:
+    fontFamily: "Manrope, sans-serif"
+    fontSize: "clamp(1.6rem, 3.2vw, 3.6rem)"
+    fontWeight: 500
+    lineHeight: 0.96
+    letterSpacing: "-0.035em"
+  body:
+    fontFamily: "Manrope, sans-serif"
+    fontSize: "15px"
+    fontWeight: 400
+    lineHeight: 1.45
+  label:
+    fontFamily: "Ubuntu Mono, monospace"
+    fontSize: "0.72rem"
+    fontWeight: 400
+    lineHeight: 1.4
+    letterSpacing: "0.04em"
+rounded:
+  square: "0"
+spacing:
+  page: "clamp(0.9rem, 1.6vw, 1.5rem)"
+  grid-gap: "1rem"
+  section: "clamp(5rem, 10vw, 10rem)"
+  touch-target: "44px"
+components:
+  ruled-navigation:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.square}"
+    height: "4.2rem"
+  feature-project-bar:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.paper-bright}"
+    rounded: "{rounded.square}"
+    height: "5.4rem"
+    padding: "0 {spacing.page}"
+  project-row:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.paper-bright}"
+    typography: "{typography.display}"
+    rounded: "{rounded.square}"
+    padding: "1.1rem 0"
+  document-link:
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.square}"
+    height: "{spacing.touch-target}"
+  drawing-compare-control:
+    backgroundColor: "{colors.paper-bright}"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.square}"
+    height: "{spacing.touch-target}"
+---
 
-## World
+# Design System: Antresole
 
-Antresole is presented as a contemporary architectural folio: part monograph, part exhibition sequence, part working drawing set. The interface disappears into a disciplined editorial grid while project images and technical sheets carry the atmosphere and proof.
+## Overview
 
-## Palette and material
+**Creative North Star: "Живой рабочий лист"**
 
-- Paper: warm off-white, not pure white.
-- Ink: near-black.
-- Secondary ink: warm architectural gray.
-- Project imagery supplies all chromatic color.
-- Hairline rules recall crop marks and drawing borders; they organize, never decorate.
+Antresole выглядит как архитектурный рабочий лист, увеличенный до масштаба выставки. Точная сетка, подписи и номера создают ощущение проектной документации; крупные изображения и намеренная пауза между ними дают интерьеру пространство.
+
+Система соединяет рациональность инженерного интерфейса с редакционной подачей портфолио. Она не маскирует чертежи декором: план, развёртка и визуализация равноправно доказывают качество проекта.
+
+**Key Characteristics:**
+
+- Светлая техническая бумага, почти чёрные чернила и редкий сигнальный оранжевый.
+- Один нейтральный гротеск для крупных заголовков и моноширинный голос для данных.
+- Двенадцатиколоночная чертёжная сетка на десктопе и четырёхколоночная на мобильном.
+- Крупные прямоугольные изображения, асимметричная галерея и значительное пустое пространство.
+- Линии, индексы и интерактивное сравнение чертежа с пространством как фирменные элементы.
+
+## Colors
+
+Палитра напоминает чертёжный стол: нейтральные поверхности держат структуру, изображения несут материальный цвет, а оранжевый отмечает только действие или координату.
+
+### Primary
+
+- **Чертёжные чернила:** основной текст, тёмные секции, сильные линии и инвертированные панели.
+
+### Secondary
+
+- **Сигнальный оранжевый:** фокус, индекс активного проекта, маркер сравнения и редкие интерактивные состояния.
+
+### Neutral
+
+- **Техническая бумага:** основной фон и поле координатной сетки.
+- **Белый лист:** галерея, рабочие листы и текст на тёмном фоне.
+- **Графитовая пометка:** вторичный текст и подписи.
+- **Конструкционная линия:** деления сетки и тихие границы.
+
+### Named Rules
+
+**The Survey Mark Rule.** Оранжевый применяется как редкая геодезическая отметка, а не как сплошная декоративная заливка.
+
+**The Project Owns Material Color Rule.** Материальная хроматика приходит из визуализаций; интерфейс остаётся технически нейтральным.
 
 ## Typography
 
-- Display: a high-contrast editorial serif with a restrained, architectural voice.
-- Utility and body: a neutral grotesk with clear Cyrillic.
-- Display titles are large but remain below the 6rem craft ceiling.
-- Metadata uses tabular numerals and compact spacing; body copy stays within 65–75 characters.
+**Display Font:** Manrope (sans-serif fallback)
 
-## Composition
+**Body Font:** Manrope (sans-serif fallback)
 
-- Asymmetric 12-column desktop grid and a clear 4-column mobile grid.
-- Full-bleed project imagery alternates with measured white fields.
-- Empty space is active and deliberate.
-- Navigation, captions, image indices, and controls use one precise line language.
-- No cards, ornamental containers, rounded image masks, gradients, or decorative shadows.
+**Label/Mono Font:** Ubuntu Mono (monospace fallback)
 
-## Interaction
+**Character:** Manrope работает как крупный современный гротеск с плотным трекингом. Ubuntu Mono превращает навигацию, даты, площади и подписи в язык рабочей документации.
 
-- The signature moment is a drawing-to-space reveal: a technical sheet enters as evidence and gives way to the corresponding spatial visualization.
-- Section changes are paced through clipping and measured vertical movement; the page is readable and complete before motion.
-- Hover and keyboard focus are expressed through line weight, underlines, and ink changes rather than filled pills.
+### Hierarchy
 
-## Responsive behavior
+- **Display** (500, fluid до 11rem, 0.88–0.96): названия проектов, индекс и финальный wordmark.
+- **Headline** (500, fluid до 5rem, 0.96): заголовки методики, планировки и сопоставления.
+- **Title** (500, fluid до 3.6rem, 0.96): название выбранного проекта в технической полосе.
+- **Body** (400, 15px, 1.45): описания проекта; смысловые абзацы ограничиваются примерно 34–65 знаками композиционно.
+- **Label** (400, 0.72rem, 0.04em): навигация, координаты, годы, площади, статусы и подписи; в основном верхний регистр.
 
-- Preserve image hierarchy and negative space, not desktop geometry.
-- On mobile, captions and metadata stay adjacent to their image.
-- Technical sheets remain legible through a contained full-width view; no horizontal page scrolling.
+### Named Rules
 
-## Content truth
+**The Two Instruments Rule.** Manrope сообщает идею и масштаб; Ubuntu Mono сообщает факт, координату и действие.
 
-- Label renders as visualizations until project completion status is confirmed.
-- Plans and elevations are cropped prepared derivatives without title-block contact data.
-- Unknown biography, service, contact, and outcome claims stay absent.
+**The Compressed Monument Rule.** Чем крупнее заголовок, тем плотнее трекинг и короче строка; перенос является частью композиции.
+
+## Layout
+
+Десктопная структура опирается на 12 колонок и адаптивное боковое поле. Координатный фон использует квадратный модуль шириной в одну двенадцатую viewport; на ширине 820px и меньше он перестраивается в четыре колонки, а композиционные пары становятся одним столбцом.
+
+Главная чередует крупный брендовый лист, полноширинный проект, методическую сетку и плотный тёмный индекс. Страница проекта начинается полноэкранной обложкой, затем переходит к техническому паспорту, асимметричной галерее и рабочей документации. Активное пустое пространство сохраняется и на мобильном, но ширина изображений становится полной.
+
+**The Evidence Sequence Rule.** Проект раскрывается от атмосферы к плану и развёртке; технические материалы не прячутся в отдельный служебный раздел.
+
+## Elevation & Depth
+
+Большинство поверхностей плоские. Глубина создаётся фотографией, инверсией светлой и тёмной секций и тонкими линиями. Только белые технические листы получают мягкую низкоконтрастную тень, чтобы читаться как физическая бумага над координатной сеткой.
+
+### Shadow Vocabulary
+
+- **Поднятый рабочий лист** (`0 14px 36px rgb(17 17 15 / 8%)`): только план или технический лист на сетке.
+
+### Named Rules
+
+**The Paper Lift Rule.** Тень обозначает физический лист; навигация, фотографии и каталожные строки остаются плоскими.
+
+## Shapes
+
+Форма строго ортогональная: квадратные углы, прямоугольные изображения, тонкие линейки и стрелки с прямыми окончаниями. Круглые карточки, мягкие капсулы и декоративные маски в систему не входят.
+
+## Components
+
+### Ruled Navigation
+
+- **Character:** компактная служебная панель на чертёжной линейке.
+- **Shape:** квадратная, с сильной верхней и нижней линией и тихими вертикальными делителями.
+- **State:** при наведении ячейка инвертируется в чернила; клавиатурный фокус отмечается оранжевым контуром.
+- **Responsive:** дисциплина скрывается, логотип и две ссылки сохраняют высоту касания не меньше 44px.
+
+### Feature Project Bar
+
+- **Character:** чёрная паспортная полоса под полноширинной обложкой.
+- **Content:** оранжевый номер, крупное название, площадь, год и диагональная стрелка.
+- **Responsive:** на мобильном площадь и год скрываются, но номер, название и действие остаются.
+
+### Project Row
+
+- **Character:** типографическая строка каталога, не карточка.
+- **State:** активная строка становится оранжевой при наведении; будущие проекты остаются приглушёнными и недоступными как ссылки.
+- **Responsive:** год и статус переходят в первую строку, название занимает отдельную крупную строку.
+
+### Document Link
+
+- **Character:** моноширинная текстовая команда с линейной стрелкой.
+- **State:** минимальная интерактивная высота 44px и общий оранжевый focus-visible.
+
+### Drawing Compare Control
+
+- **Character:** рабочий инструмент сопоставления, а не декоративный слайдер.
+- **Behavior:** оранжевая вертикаль разделяет развёртку и визуализацию; ползунок имеет квадратный thumb и высоту касания 44px.
+
+### Technical Sheet
+
+- **Character:** белый физический лист поверх координатной сетки.
+- **Depth:** единственный компонент с мягкой бумажной тенью.
+- **Caption:** моноширинная подпись расположена непосредственно под изображением.
+
+## Do's and Don'ts
+
+### Do:
+
+- **Do** строить иерархию масштабом, сеткой, линиями и паузами.
+- **Do** использовать оранжевый только для активных меток, фокуса и координат.
+- **Do** показывать план, развёртку и визуализацию как единую доказательную последовательность.
+- **Do** сохранять минимальную интерактивную высоту 44px и видимый `focus-visible`.
+- **Do** отключать плавное движение при `prefers-reduced-motion`.
+
+### Don't:
+
+- **Don't** добавлять антикву, округлые SaaS-карточки, капсулы или универсальные панели.
+- **Don't** применять градиенты, стекло и декоративные тени; исключение — мягкая тень технического листа.
+- **Don't** копировать композиции референсов буквально или использовать чужие проектные изображения и тексты.
+- **Don't** заполнять пустое пространство второстепенным контентом.
+- **Don't** вводить неподтверждённые факты о студии или проектах ради заполнения макета.

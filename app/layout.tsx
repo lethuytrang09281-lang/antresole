@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     "Портфолио студии дизайна и архитектуры Antresole: интерьеры, планировочные решения и рабочая документация.",
 };
 
+export const viewport: Viewport = {
+  themeColor: "#f4f2ed",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body>{children}</body>
+      <body>
+        <a className="skip-link" href="#main-content">К содержанию</a>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowIcon } from "../../components/ArrowIcon";
 import { DrawingReveal } from "../../components/DrawingReveal";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Балтийский 99",
-  description:
-    "Проект жилого интерьера площадью 99 м²: визуализации, планировочное решение и развёртка гостиной.",
+  description: "Проект жилого интерьера площадью 99 м²: визуализации, планировочное решение и развёртка гостиной.",
 };
 
 export default function BaltiyskiyProject() {
@@ -16,87 +16,84 @@ export default function BaltiyskiyProject() {
     <>
       <div id="top" />
       <SiteHeader />
-      <main className="case-page">
-        <header className="case-title">
-          <Link href="/" className="case-title__back">← Все проекты</Link>
-          <h1>Балтийский 99</h1>
-          <dl>
-            <div><dt>Тип</dt><dd>Жилой интерьер</dd></div>
-            <div><dt>Площадь</dt><dd>99 м²</dd></div>
-            <div><dt>Год</dt><dd>2022</dd></div>
-            <div><dt>Материал</dt><dd>Визуализации</dd></div>
-          </dl>
-        </header>
-
-        <figure className="case-hero">
+      <main className="case-page" id="main-content">
+        <section className="case-cover" aria-labelledby="case-title">
           <Image
             src="/images/baltiyskiy/living-hero.webp"
             alt="Визуализация гостиной и кухни проекта Балтийский 99"
-            width="2200"
-            height="1238"
+            fill
+            priority
             sizes="100vw"
-            loading="eager"
-            fetchPriority="high"
           />
-          <figcaption>Гостиная и кухня · общая перспектива</figcaption>
-        </figure>
+          <div className="case-cover__shade" />
+          <Link href="/" className="case-cover__back"><ArrowIcon direction="back" /> Все проекты</Link>
+          <div className="case-cover__meta"><span>Жилой интерьер</span><span>99 м²</span><span>2022</span></div>
+          <h1 id="case-title">Балтийский<br />99</h1>
+          <p>
+            Светлая основа, точные тёмные линии и спокойный ритм натуральных фактур.
+          </p>
+        </section>
 
-        <section className="case-intro" aria-labelledby="case-intro-title">
-          <h2 id="case-intro-title">
-            Светлая основа, точные тёмные линии и&nbsp;спокойный ритм натуральных фактур.
-          </h2>
+        <section className="case-statement" aria-label="О проекте">
           <p>
             Общее пространство кухни и гостиной собрано вокруг длинных горизонталей,
             мягкого дневного света и выхода на лоджию. В приватных комнатах та же
             сдержанная палитра меняет характер через дерево, текстиль и цветовые акценты.
           </p>
+          <dl>
+            <div><dt>Статус</dt><dd>Визуализации</dd></div>
+            <div><dt>Тип</dt><dd>Жилой интерьер</dd></div>
+          </dl>
+          <span className="case-statement__index">01<small>/01</small></span>
         </section>
 
-        <section className="visual-sequence" aria-label="Визуализации проекта">
-          <figure className="plate plate--portrait plate--right">
-            <Image src="/images/baltiyskiy/loggia.webp" alt="Визуализация лоджии с креслом и растениями" width="1200" height="1500" loading="lazy" sizes="(max-width: 820px) 86vw, 42vw" />
-            <figcaption><span>Лоджия</span><span>01 / 05</span></figcaption>
+        <section className="gallery" aria-label="Визуализации проекта">
+          <figure className="gallery__wide">
+            <Image src="/images/baltiyskiy/loggia.webp" alt="Визуализация лоджии с креслом и растениями" width="1200" height="1500" loading="lazy" sizes="100vw" />
+            <figcaption>Лоджия / 01</figcaption>
           </figure>
-
-          <figure className="plate plate--landscape plate--left">
-            <Image src="/images/baltiyskiy/bedroom.webp" alt="Визуализация спальни с рабочим местом" width="1800" height="1200" loading="lazy" sizes="(max-width: 820px) 86vw, 68vw" />
-            <figcaption><span>Спальня</span><span>02 / 05</span></figcaption>
+          <figure className="gallery__landscape">
+            <Image src="/images/baltiyskiy/bedroom.webp" alt="Визуализация спальни с рабочим местом" width="1800" height="1200" loading="lazy" sizes="(max-width: 820px) 100vw, 66vw" />
+            <figcaption>Спальня / 02</figcaption>
           </figure>
-
-          <div className="plate-pair">
-            <figure className="plate">
-              <Image src="/images/baltiyskiy/bathroom.webp" alt="Визуализация ванной комнаты в светлом камне" width="1200" height="1500" loading="lazy" sizes="(max-width: 820px) 86vw, 46vw" />
-              <figcaption><span>Ванная</span><span>03 / 05</span></figcaption>
+          <div className="gallery__pair">
+            <figure>
+              <Image src="/images/baltiyskiy/bathroom.webp" alt="Визуализация ванной комнаты в светлом камне" width="1200" height="1500" loading="lazy" sizes="(max-width: 820px) 100vw, 50vw" />
+              <figcaption>Ванная / 03</figcaption>
             </figure>
-            <figure className="plate plate--offset">
-              <Image src="/images/baltiyskiy/child-room.webp" alt="Визуализация детской комнаты с терракотовой кроватью" width="1200" height="1500" loading="lazy" sizes="(max-width: 820px) 86vw, 46vw" />
-              <figcaption><span>Детская</span><span>04 / 05</span></figcaption>
+            <figure>
+              <Image src="/images/baltiyskiy/child-room.webp" alt="Визуализация детской комнаты с терракотовой кроватью" width="1200" height="1500" loading="lazy" sizes="(max-width: 820px) 100vw, 50vw" />
+              <figcaption>Детская / 04</figcaption>
             </figure>
           </div>
-
-          <figure className="plate plate--portrait plate--center">
-            <Image src="/images/baltiyskiy/hallway.webp" alt="Визуализация светлой прихожей" width="1200" height="1500" loading="lazy" sizes="(max-width: 820px) 86vw, 42vw" />
-            <figcaption><span>Прихожая</span><span>05 / 05</span></figcaption>
+          <figure className="gallery__portrait">
+            <Image src="/images/baltiyskiy/hallway.webp" alt="Визуализация светлой прихожей" width="1200" height="1500" loading="lazy" sizes="(max-width: 820px) 100vw, 54vw" />
+            <figcaption>Прихожая / 05</figcaption>
           </figure>
         </section>
 
         <section className="planning" aria-labelledby="planning-title">
           <div className="planning__copy">
-            <h2 id="planning-title">Планировочное решение</h2>
+            <h2 id="planning-title">Планировочное<br />решение</h2>
             <p>
-              План связывает кухню, столовую, гостиную и лоджию в один дневной маршрут,
+              План связывает кухню, столовую, гостиную и лоджию в единый дневной маршрут,
               сохраняя отдельные приватные комнаты и функциональные зоны хранения.
             </p>
           </div>
-          <figure>
-            <Image src="/images/baltiyskiy/plan.webp" alt="Финальное планировочное решение квартиры 99 квадратных метров" width="2000" height="1188" loading="lazy" sizes="(max-width: 820px) 100vw, 75vw" />
-            <figcaption>Финальный вариант · 07.07.2022</figcaption>
+          <figure className="planning__sheet">
+            <a href="/images/baltiyskiy/plan.webp" target="_blank" rel="noreferrer">
+              <Image src="/images/baltiyskiy/plan.webp" alt="Финальное планировочное решение квартиры 99 квадратных метров" width="2000" height="1188" loading="lazy" sizes="100vw" />
+            </a>
+            <figcaption>Финальный вариант / 07.07.2022</figcaption>
+            <a className="document-open" href="/images/baltiyskiy/plan.webp" target="_blank" rel="noreferrer">
+              Открыть план крупно <ArrowIcon direction="diagonal" />
+            </a>
           </figure>
         </section>
 
         <section className="evidence" aria-labelledby="evidence-title">
           <div className="evidence__copy">
-            <h2 id="evidence-title">От линии к пространству</h2>
+            <h2 id="evidence-title">Чертёж /<br />пространство</h2>
             <p>
               Развёртка фиксирует пропорции, привязки и отделку стены гостиной.
               Переместите линию, чтобы сопоставить рабочий лист с визуализацией.
@@ -106,7 +103,7 @@ export default function BaltiyskiyProject() {
         </section>
 
         <nav className="case-next" aria-label="Навигация по проектам">
-          <Link href="/">Вернуться к портфолио <span aria-hidden="true">→</span></Link>
+          <Link href="/">Вернуться к проектам <ArrowIcon direction="forward" /></Link>
         </nav>
       </main>
       <SiteFooter />

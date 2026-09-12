@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-12T12:38:35-04:00",
+  "title": "Design System: Antresole",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Техническая бумага",
+        "canonical": "#f3f3ec",
+        "tonalRamp": ["#24241f", "#41413a", "#606059", "#81817a", "#a4a49d", "#c8c8c0", "#e5e5dd", "#f3f3ec"]
+      },
+      "paper-bright": {
+        "role": "neutral",
+        "displayName": "Белый лист",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#262626", "#454545", "#666666", "#898989", "#adadad", "#d2d2d2", "#eeeeee", "#ffffff"]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Чертёжные чернила",
+        "canonical": "#11110f",
+        "tonalRamp": ["#11110f", "#292925", "#464640", "#66665f", "#898981", "#afafa6", "#d3d3cb", "#f2f2ec"]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Графитовая пометка",
+        "canonical": "#66665f",
+        "tonalRamp": ["#22221e", "#3d3d37", "#565650", "#707069", "#91918a", "#b4b4ac", "#d6d6ce", "#f3f3ec"]
+      },
+      "construction-line": {
+        "role": "neutral",
+        "displayName": "Конструкционная линия",
+        "canonical": "#d7d7cf",
+        "tonalRamp": ["#24241f", "#42423c", "#62625b", "#84847d", "#a7a79f", "#c4c4bc", "#d7d7cf", "#f3f3ec"]
+      },
+      "safety-orange": {
+        "role": "secondary",
+        "displayName": "Сигнальный оранжевый",
+        "canonical": "#f24a16",
+        "tonalRamp": ["#411000", "#6a1d04", "#922906", "#bc3509", "#e5430f", "#f46c40", "#faad94", "#ffede7"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Названия проектов, индекс и финальный wordmark." },
+      "headline": { "displayName": "Headline", "purpose": "Заголовки методики и технических секций." },
+      "title": { "displayName": "Title", "purpose": "Название выбранного проекта в паспортной полосе." },
+      "body": { "displayName": "Body", "purpose": "Короткие описания проекта и метода." },
+      "label": { "displayName": "Technical Label", "purpose": "Навигация, координаты, годы, площади, статусы и подписи." }
+    },
+    "shadows": [
+      {
+        "name": "paper-lift",
+        "value": "0 14px 36px rgb(17 17 15 / 8%)",
+        "purpose": "Только белые планы и технические листы над координатной сеткой."
+      }
+    ],
+    "motion": [
+      { "name": "nav-invert", "value": "background-color 180ms ease-out, color 180ms ease-out", "purpose": "Инверсия ячейки навигации." },
+      { "name": "feature-image", "value": "transform 650ms cubic-bezier(0.16, 1, 0.3, 1), filter 300ms ease-out", "purpose": "Сдержанное приближение обложки проекта." },
+      { "name": "project-row-arrow", "value": "transform 220ms ease-out", "purpose": "Диагональный сдвиг стрелки активного проекта." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "820px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ruled Navigation",
+      "kind": "nav",
+      "refersTo": "ruled-navigation",
+      "description": "Служебная навигация в ячейках чертёжной линейки.",
+      "html": "<nav class=\"ds-ruled-nav\"><a href=\"#projects\">Проекты</a><a href=\"#studio\">Студия</a></nav>",
+      "css": ".ds-ruled-nav { display:grid; grid-template-columns:1fr 1fr; min-height:4.2rem; border-top:2px solid #11110f; border-bottom:1px solid #11110f; background:#f3f3ec; font-family:'Ubuntu Mono',monospace; font-size:.72rem; text-transform:uppercase; } .ds-ruled-nav a { display:flex; min-height:44px; align-items:center; justify-content:center; border-left:1px solid #d7d7cf; color:#11110f; text-decoration:none; transition:background-color 180ms ease-out,color 180ms ease-out; } .ds-ruled-nav a:hover { background:#11110f; color:#fff; } .ds-ruled-nav a:focus-visible { outline:2px solid #f24a16; outline-offset:-4px; }"
+    },
+    {
+      "name": "Feature Project Bar",
+      "kind": "custom",
+      "refersTo": "feature-project-bar",
+      "description": "Паспортная полоса главного проекта под полноширинной обложкой.",
+      "html": "<a class=\"ds-feature-bar\" href=\"#\"><span class=\"ds-feature-bar__number\">01</span><strong>Балтийский 99</strong><span>99 м²</span><span>2022</span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 18 18 4M9 4h9v9\"/></svg></a>",
+      "css": ".ds-feature-bar { display:grid; grid-template-columns:1fr 7fr 1fr 1fr auto; gap:1rem; align-items:center; min-height:5.4rem; padding:0 1.5rem; background:#11110f; color:#fff; font-family:'Ubuntu Mono',monospace; font-size:.78rem; text-decoration:none; text-transform:uppercase; } .ds-feature-bar strong { font-family:Manrope,sans-serif; font-size:clamp(1.6rem,3.2vw,3.6rem); font-weight:500; letter-spacing:-.035em; } .ds-feature-bar__number { color:#f24a16; } .ds-feature-bar svg { width:1.05em; fill:none; stroke:currentColor; stroke-width:1.4; } .ds-feature-bar:focus-visible { outline:2px solid #f24a16; outline-offset:4px; }"
+    },
+    {
+      "name": "Project Row",
+      "kind": "custom",
+      "refersTo": "project-row",
+      "description": "Крупная типографическая строка каталога вместо карточки.",
+      "html": "<a class=\"ds-project-row\" href=\"#\"><span>(2022)</span><strong>Балтийский 99</strong><span>Жилой интерьер</span><b>↗</b></a>",
+      "css": ".ds-project-row { display:grid; grid-template-columns:1.4fr 7fr 2fr auto; gap:1rem; min-height:8rem; padding:1.1rem 0; border-top:1px solid #fff; border-bottom:1px solid rgb(255 255 255 / 45%); background:#11110f; color:#fff; font-family:'Ubuntu Mono',monospace; font-size:.76rem; text-decoration:none; text-transform:uppercase; } .ds-project-row strong { font-family:Manrope,sans-serif; font-size:clamp(2.8rem,6.7vw,7.4rem); font-weight:500; letter-spacing:-.04em; line-height:.88; } .ds-project-row b { color:#f24a16; font-size:1.3rem; transition:transform 220ms ease-out; } .ds-project-row:hover strong { color:#f24a16; } .ds-project-row:hover b { transform:translate(.3rem,-.3rem); } .ds-project-row:focus-visible { outline:2px solid #f24a16; outline-offset:4px; }"
+    },
+    {
+      "name": "Document Link",
+      "kind": "button",
+      "refersTo": "document-link",
+      "description": "Моноширинная команда открытия технического листа.",
+      "html": "<a class=\"ds-document-link\" href=\"#\">Открыть план крупно <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 18 18 4M9 4h9v9\"/></svg></a>",
+      "css": ".ds-document-link { display:inline-flex; min-height:44px; align-items:center; gap:.5rem; color:#11110f; font-family:'Ubuntu Mono',monospace; font-size:.75rem; text-transform:uppercase; text-underline-offset:.25em; } .ds-document-link svg { width:1.05em; fill:none; stroke:currentColor; stroke-width:1.4; } .ds-document-link:hover { color:#f24a16; } .ds-document-link:focus-visible { outline:2px solid #f24a16; outline-offset:4px; }"
+    },
+    {
+      "name": "Drawing Compare Control",
+      "kind": "input",
+      "refersTo": "drawing-compare-control",
+      "description": "Линейный ползунок сопоставления развёртки и визуализации.",
+      "html": "<label class=\"ds-drawing-control\"><span>Чертёж</span><input type=\"range\" min=\"0\" max=\"100\" value=\"50\" aria-label=\"Сравнить чертёж и визуализацию\"><span>Пространство</span></label>",
+      "css": ".ds-drawing-control { display:grid; grid-template-columns:auto 1fr auto; gap:.8rem; align-items:center; color:#11110f; font-family:'Ubuntu Mono',monospace; font-size:.72rem; text-transform:uppercase; } .ds-drawing-control input { width:100%; height:44px; margin:0; appearance:none; background:linear-gradient(#11110f,#11110f) center / 100% 1px no-repeat; cursor:ew-resize; } .ds-drawing-control input::-webkit-slider-thumb { width:1.1rem; height:1.1rem; appearance:none; border:1px solid #11110f; border-radius:0; background:#fff; } .ds-drawing-control input:focus-visible { outline:2px solid #f24a16; outline-offset:4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Живой рабочий лист",
+    "overview": "Antresole выглядит как архитектурный рабочий лист, увеличенный до масштаба выставки. Точная сетка, подписи и номера создают ощущение проектной документации; крупные изображения и намеренная пауза между ними дают интерьеру пространство.\n\nСистема соединяет рациональность инженерного интерфейса с редакционной подачей портфолио. Она не маскирует чертежи декором: план, развёртка и визуализация равноправно доказывают качество проекта.",
+    "keyCharacteristics": [
+      "Светлая техническая бумага, почти чёрные чернила и редкий сигнальный оранжевый.",
+      "Один нейтральный гротеск для крупных заголовков и моноширинный голос для данных.",
+      "Двенадцатиколоночная чертёжная сетка на десктопе и четырёхколоночная на мобильном.",
+      "Крупные прямоугольные изображения, асимметричная галерея и значительное пустое пространство.",
+      "Линии, индексы и интерактивное сравнение чертежа с пространством как фирменные элементы."
+    ],
+    "rules": [
+      { "name": "The Survey Mark Rule", "body": "Оранжевый применяется как редкая геодезическая отметка, а не как сплошная декоративная заливка.", "section": "colors" },
+      { "name": "The Project Owns Material Color Rule", "body": "Материальная хроматика приходит из визуализаций; интерфейс остаётся технически нейтральным.", "section": "colors" },
+      { "name": "The Two Instruments Rule", "body": "Manrope сообщает идею и масштаб; Ubuntu Mono сообщает факт, координату и действие.", "section": "typography" },
+      { "name": "The Compressed Monument Rule", "body": "Чем крупнее заголовок, тем плотнее трекинг и короче строка; перенос является частью композиции.", "section": "typography" },
+      { "name": "The Evidence Sequence Rule", "body": "Проект раскрывается от атмосферы к плану и развёртке; технические материалы не прячутся в отдельный служебный раздел.", "section": "layout" },
+      { "name": "The Paper Lift Rule", "body": "Тень обозначает физический лист; навигация, фотографии и каталожные строки остаются плоскими.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do строить иерархию масштабом, сеткой, линиями и паузами.",
+      "Do использовать оранжевый только для активных меток, фокуса и координат.",
+      "Do показывать план, развёртку и визуализацию как единую доказательную последовательность.",
+      "Do сохранять минимальную интерактивную высоту 44px и видимый `focus-visible`.",
+      "Do отключать плавное движение при `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "Don't добавлять антикву, округлые SaaS-карточки, капсулы или универсальные панели.",
+      "Don't применять градиенты, стекло и декоративные тени; исключение — мягкая тень технического листа.",
+      "Don't копировать композиции референсов буквально или использовать чужие проектные изображения и тексты.",
+      "Don't заполнять пустое пространство второстепенным контентом.",
+      "Don't вводить неподтверждённые факты о студии или проектах ради заполнения макета."
+    ]
+  }
+}
